@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+import Projects from '../components/Projects.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -11,40 +13,32 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<body>
+			<Nav/>
+			<div class="bg-slate-50 h-screen">
+			<div class="flex justify-start items-start ">
+				<div class="text-bold items-center justify-center mt-20">
+				  <div class="flex flex-col justify-start ml-14">
+					<div class="text-4xl font-bold mt-32">Hello, I'm</div>
+					<div class="text-8xl font-extrabold text-violet-600">Videsh</div>
+					<div class="text-4xl font-bold">a Student,</div>
+					<div class="text-4xl font-bold">Engineer,</div>
+					<div class="text-4xl font-bold">Developer</div>
+					<div data-framer-component-type="SVG" data-framer-name="arrow" name="arrow" style="image-rendering: pixelated; flex-shrink: 0; background-size: 100% 100%;">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 194 65">
+							<g transform="translate(0 0.807)" id="ss965298784_1">
+								<path d="M 0 63.386 L 0 0 L 193.949 0 L 193.949 63.386 Z" fill="transparent"></path>
+								<path d="M 0 48.455 L 0 46.965 C 0.856 36.953 6.707 26.904 13.858 20.489 C 26.687 8.977 49.549 35.832 58.071 44.836 C 60.39 47.29 62.562 49.186 65.211 50.697 C 65.789 51.026 66.199 50.882 66.441 50.264 C 68.449 45.193 70.699 40.296 73.191 35.572 C 77.368 27.673 81.653 19.964 87.884 13.956 C 90.675 11.265 94.02 10.037 97.917 10.272 C 111.981 11.117 119.874 21.638 129.382 30.436 C 134.171 34.867 145.727 41.97 151.334 35.236 C 154.59 31.33 157.516 26.904 162.597 24.921 C 168.73 22.521 175.085 22.932 181.477 23.073 C 181.821 23.084 181.864 22.974 181.607 22.743 C 175.605 17.331 170.355 11.052 164.786 5.19 C 161.855 2.097 165.918 -2.118 169.591 1.826 C 175.952 8.641 182.03 15.7 189.111 21.356 C 192.854 24.352 197.232 29.574 189.75 31.98 C 179.283 35.344 174.305 50.08 169.488 61.256 C 167.858 65.054 162.478 62.947 164.223 58.889 C 168.557 48.801 173.091 35.702 182.458 29.125 C 182.483 29.107 182.502 29.082 182.512 29.053 C 182.522 29.024 182.522 28.992 182.513 28.963 C 182.504 28.933 182.486 28.908 182.462 28.889 C 182.437 28.87 182.408 28.86 182.377 28.859 C 175.659 28.811 166.303 27.521 161.07 32.836 C 156.735 37.235 153.398 43.633 146.307 43.693 C 123.683 43.877 117.767 17.06 97.094 15.944 C 87.992 15.451 74.854 44.906 72.086 51.77 C 67.747 62.491 57.675 52.908 53.558 48.552 C 45.513 40.041 36.579 29.726 26.026 24.514 C 22.483 22.765 19.2 23.23 16.437 26.096 C 10.629 32.11 6.03 39.982 5.737 48.509 C 5.623 51.781 1.127 51.971 0 48.455 Z M 185.188 26.887 C 185.131 27.01 185.089 27.142 185.064 27.283 C 185.024 27.514 185.109 27.577 185.319 27.472 L 186.153 27.061 C 186.388 26.945 186.411 26.795 186.223 26.611 L 185.725 26.107 C 185.465 25.851 185.322 25.903 185.297 26.264 L 185.27 26.589 C 185.263 26.693 185.235 26.794 185.188 26.887 Z" fill="rgb(187,107,217)"></path>
+								<path d="M 185.27 26.589 L 185.297 26.264 C 185.322 25.903 185.465 25.851 185.725 26.107 L 186.223 26.611 C 186.411 26.795 186.388 26.945 186.153 27.061 L 185.319 27.473 C 185.109 27.577 185.024 27.514 185.064 27.283 C 185.089 27.142 185.131 27.01 185.189 26.887 C 185.235 26.794 185.263 26.693 185.27 26.589 Z" fill="rgb(242,201,76)"></path>
+							</g>
+						</svg>
+					</div>
+				</div>
+				</div>
+			  </div>
+			</div>
+			</body>
+			<Footer/>
 		</main>
-		<Footer />
 	</body>
 </html>

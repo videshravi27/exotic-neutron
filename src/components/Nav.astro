@@ -1,0 +1,27 @@
+<header class="lg:flex p-5 gap-5 text-black mr-4 font-semibold fixed top-0 left-0 right-0 bg-white z-50">
+  <div class="flex w-full justify-between">
+    <a href="/" class="ml-12 text-violet-600">videsh</a>
+    <div class="block lg:hidden">
+      <!-- Menu icon/button -->
+      <button onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <ul id="menu" class="lg:flex hidden flex-col lg:flex-row lg:gap-5">
+    <li><a href="/Projects">Projects</a></li> <!-- Corrected link -->
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/about" class="whitespace-no-wrap">About</a></li> <!-- Adjusted styling to prevent line break -->
+  </ul>
+</header>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu) {
+      menu.classList.toggle("hidden");
+    }
+  }
+</script>
