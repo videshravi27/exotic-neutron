@@ -1,4 +1,5 @@
 ---
+import Nav from '../components/Nav.astro';
 import Layout from '../layouts/BlogPost.astro';
 import BlogPost from '../layouts/BlogPost.astro';
 ---
@@ -9,11 +10,16 @@ import BlogPost from '../layouts/BlogPost.astro';
   description="Lorem ipsum dolor sit amet"
   pubDate={new Date('March 14 2024')}
 >
-  <div style="font-family: Arial, sans-serif; line-height: 1.6; margin-bottom: 1.5rem;">
-    <p>
-      I am currently pursuing my Bachelor's degree in Computer Science Engineering at Sri Eshwar College of Engineering, where I am immersing myself in the dynamic world of programming and technology. Fueled by a genuine passion for innovation and problem-solving, I find great joy in exploring the intricate realms of software development. My primary focus revolves around mobile app development, with a specialization in Flutter. I am deeply fascinated by the versatility and efficiency it offers in creating cross-platform applications, and I eagerly seize every opportunity to delve deeper into its capabilities. In addition to my academic pursuits, I am an avid learner with an insatiable curiosity for emerging technologies. I am particularly intrigued by the potential of blockchain technology and its transformative impact on various industries. My interest extends to the fintech sector, where I see boundless opportunities for innovation and disruption. One of my strongest assets is my effective communication skills, which I continually hone through both academic and practical experiences. I firmly believe in the power of collaboration and strive to cultivate an environment where ideas can flourish and projects can thrive. Moreover, I pride myself on my disciplined work ethic and dedication to excellence. I approach every task with meticulous attention to detail and an unwavering commitment to achieving the best possible outcomes. In essence, I am a proactive individual with a keen eye for innovation and a thirst for knowledge. I am driven by the belief that technology has the power to transform lives and shape the future, and I am excited to be a part of this ever-evolving journey.
-    </p>
+<Nav/>
+<div class="max-w-xl rounded overflow-hidden shadow-lg mx-auto text-2xl">
+	<div class="px-6 py-4">
+	  <p class="text-gray-700 text-base text-center">
+		Here's a shortened version:
+
+		"I'm currently pursuing a Bachelor's degree in Computer Science Engineering at Sri Eshwar College of Engineering, deeply immersed in the dynamic world of programming and technology. With a genuine passion for innovation, I joyfully explore software development, focusing on mobile app development, particularly Flutter. I'm fascinated by its versatility in creating cross-platform applications and eagerly delve deeper into its capabilities. Beyond academics, I'm an avid learner with a curiosity for emerging technologies, especially blockchain, and its transformative impact on various industries. I see boundless opportunities for innovation, particularly in the fintech sector. Effective communication is one of my strongest assets, honed through both academic and practical experiences. I believe in collaboration, cultivating environments where ideas flourish. With a disciplined work ethic and commitment to excellence, I approach tasks with meticulous attention, driven by a thirst for knowledge and a belief in technology's power to shape the future."	</div>
   </div>
+  
+  
 
 
 </Layout>

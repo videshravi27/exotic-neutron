@@ -9,16 +9,7 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
-
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
-
-	<body>
-		<!-- <Header /> -->
-		<main>
-			<article>
+<div>
 				<div class="prose">
 					<div class="title">
 						<div class="date">
@@ -36,8 +27,4 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					</div>
 					<slot />
 				</div>
-			</article>
-		</main>
-		<!-- <Footer /> -->
-	</body>
-</html>
+				</div>
