@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layouts.astro";
+import Nav from '../components/Nav.astro';
+---
+<Layout title="My Thoughts" description="My blog">
+    <!--Display all posts within the posts folder -->
+    <ul class="app-card-list">
+      {
+        const allPosts = []; // Declare the 'allPosts' variable before using it
+        allPosts.map((post) => {
+          return (
+            <AppCards
+              name={post.frontmatter.title}
+              url={post.url}
+              description={post.frontmatter.description}
+            />
+          );
+        })
+      }
+    </ul>
+  </Layout>

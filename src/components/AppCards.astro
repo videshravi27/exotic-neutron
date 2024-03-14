@@ -1,0 +1,29 @@
+---
+export interface Props {
+  name: string;
+  url?: string;
+  description: string;
+  projectType?: string;
+}
+
+const { name, url, description, projectType } = Astro.props;
+---
+
+<li class="link-card">
+  <a href={url}>
+    <h3>
+      {name}
+
+      <span>&rarr;</span>
+    </h3>
+    <span>{description}</span>
+  </a>
+  <!--If projectType -->
+  {
+    projectType && (
+      <div class="project-type">
+        <img src={projectType} alt="project type" />
+      </div>
+    )
+  }
+</li>
